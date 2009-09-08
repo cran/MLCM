@@ -1,0 +1,11 @@
+export(mlcm, mlcm.default, make.wide, make.wide.full)
+S3method(plot, mlcm)
+S3method(print, mlcm)
+S3method(print, summary.mlcm)
+S3method(summary, mlcm)
+S3method(logLik, mlcm)
+S3method(anova, mlcm)
+S3method(coef, mlcm)
+S3method(vcov, mlcm)
+
+
