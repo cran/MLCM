@@ -1,0 +1,8 @@
+
+0.0-2
+
+  fixed typo in Description.  Works for stimuli distributed along 2 or
+  more dimensions
+
+  added boot.mlcm and binom.diagnostics and a plot method for the
+  latter

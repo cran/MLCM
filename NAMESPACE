@@ -1,5 +1,8 @@
-export(mlcm, mlcm.default, make.wide, make.wide.full)
+export(mlcm, mlcm.default, make.wide, make.wide.full,
+	boot.mlcm, binom.diagnostics)
+S3method(fitted, mlcm)
 S3method(plot, mlcm)
+S3method(plot, mlcm.diag)
 S3method(print, mlcm)
 S3method(print, summary.mlcm)
 S3method(summary, mlcm)
