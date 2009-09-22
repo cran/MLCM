@@ -73,6 +73,7 @@ bg.full <- mlcm(BumpyGlossy, model = "full")
 
 anova(bg.add, bg.full, test = "Chisq")
 
+opar <- par(mfrow = c(1, 2), pty = "s")
 # Compare additive and full model graphically
 plot(bg.full, standard.scale = TRUE, type = "b", 
 	lty = 2, ylim = c(0, 1.05),
@@ -86,6 +87,16 @@ bg.pr <- with(bg.add, outer(pscale[, 1], pscale[, 2], "+"))
 cf <- coef(lm(as.vector(bg.full$pscale/bg.full$pscale[5, 5]) ~ 
 	as.vector(bg.pr) - 1))
 matplot(cf * bg.pr, type = "b", add = TRUE, lty = 1)
+
+#### Now make image of residuals between 2 models
+bg.full.sc <- bg.full$pscale/bg.full$pscale[5, 5]
+bg.add.adj <- cf * bg.pr
+bg.res <- (bg.add.adj - bg.full.sc) + 0.5
+image(1:5, 1:5, bg.res, 
+	col = grey.colors(100, min(bg.res), max(bg.res)),
+	xlab = "Gloss Level", ylab = "Bumpiness Level" 
+	)
+par(opar)
 }
 
 \keyword{models}

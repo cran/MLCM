@@ -6,6 +6,8 @@
 \title{ Conjoint Measurement Data for Bumpiness and Glossiness}
 \description{
   Data sets from two observers who were asked to judge which of two samples appeared bumpier (\code{BumpyGlossy}) or glossier (\code{GlossyBumpy}) when the two attributes were covaried simultaneously.
+  The data sets are of class \sQuote{mlcm.df} and
+  \sQuote{data.frame}.
 }
 \usage{
 	data(BumpyGlossy)

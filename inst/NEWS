@@ -6,3 +6,12 @@
 
   added boot.mlcm and binom.diagnostics and a plot method for the
   latter
+
+0.0-3
+
+  data sets BumpyGlossy and GlossyBumpy given class mlcm.df and data.frame
+
+  added plot method for objects of class mlcm.df which gives a conjoint
+  proportions plot as in Fig. 4 of the Ho et al. reference
+
+  added residual plot example to mlcm.rd
