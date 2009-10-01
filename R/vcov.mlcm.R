@@ -1,2 +1,4 @@
 `vcov.mlcm` <- function(object, ...)
-	vcov(object$obj, ...)
+	if (object$method == "glm")
+		vcov(object$obj, ...) else
+		solve(object$hess)

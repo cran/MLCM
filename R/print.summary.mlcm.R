@@ -13,7 +13,12 @@ function(x,
     cat(format(x$sigma, digits = digits))
     cat("\t\t\tlogLik:\t")
     cat(format(x$logLik, digits = digits))
-    cat("\n")	
+    cat("\n\n")	
+    if(x$method == "formula"){
+    	cat("formula:\t", as.character(x$formula))
+    	cat("\n\np:\t", x$par)
+    	}
+    cat("\n")
     invisible(x)
 }
 

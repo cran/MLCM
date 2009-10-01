@@ -1,8 +1,11 @@
 `logLik.mlcm` <-
 function(object, ...) {
-	val <- logLik(object$obj)
-	attr(val, "df") <- length(coef(object$obj))
-	class(val) <- "logLik"
+	if (object$method == "glm")
+		val <- logLik(object$obj) else {
+		val <- object$logLik
+		attr(val, "df") <- length(object$par)
+		class(val) <- "logLik"
+		}
 	val
 	}
 

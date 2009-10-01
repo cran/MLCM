@@ -15,3 +15,7 @@
   proportions plot as in Fig. 4 of the Ho et al. reference
 
   added residual plot example to mlcm.rd
+
+0.0-5
+
+  Added formula method for mlcm and adjusted methods to deal with it

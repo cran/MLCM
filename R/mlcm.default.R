@@ -53,8 +53,11 @@ function (x, model = "add", whichdim = NULL, lnk = "probit",
         colnames(pscale) <- paste(dmn[2], seq_len(nlp), sep = "")
         rownames(pscale) <- paste(dmn[1], seq_len(nlp), sep = "")
     })
-    psc.lst <- list(pscale = pscale, sigma = 1, NumDim = nd, 
-        NumLev = nl + 1, model = model, link = lnk, obj = psc.glm)
+    psc.lst <- list(pscale = pscale, sigma = 1, 
+    	method = "glm",
+    	NumDim = nd, NumLev = nl + 1, 
+    	model = model, link = lnk, 
+    	obj = psc.glm)
     class(psc.lst) <- "mlcm"
     psc.lst
 }

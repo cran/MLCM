@@ -27,13 +27,14 @@
 plot(mlcm(BumpyGlossy), type = "b")
 
 bg.full <- mlcm(BumpyGlossy, model = "full")
-par(mfrow = c(1, 2), pty = "s")
+opar <- par(mfrow = c(1, 2), pty = "s")
 plot(bg.full, type = "b", 
 	xlab = "Gloss Level",
 	ylab = "Bumpiness Model Estimates")
 plot(bg.full, transpose = TRUE, type = "b",
 	xlab = "Bumpiness Level",
 	ylab = "Glossiness Model Estimates")
+par(opar)
 }
 
 \keyword{ hplot }
