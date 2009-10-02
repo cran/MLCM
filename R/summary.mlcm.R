@@ -4,8 +4,12 @@ function(object,
   z <- object
   ans <- list()
   ans$pscale <- z$pscale	
+  ans$se <- if(z$method == "glm") 
+  		coef(summary(z$obj))[, 2] else
+  		object$se  
   ans$sigma <- z$sigma
-  ans$logLik <- logLik(z)[1]	
+  ans$logLik <- logLik(z)[1]
+  ans$aic <- AIC(z)	
   ans$link <- z$link
   ans$method <- z$method
   ans$par <- z$par

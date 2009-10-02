@@ -1,7 +1,7 @@
 `coef.mlcm` <- function(object, ...){
 	if (object$method == "glm")
 		cc <- object$obj$coef else {
-		cc <- object$pscale[-c(1, length(bg.f$stimulus) + 
+		cc <- object$pscale[-c(1, length(object$stimulus) + 
 			1)]
 		dn <- as.vector(sapply(names(object$data)[c(2, 4)], 
 				substr, 1, 1))

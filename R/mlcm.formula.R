@@ -17,7 +17,7 @@ mlcm.formula <- function(x, p, data,
         as.function(ff, parent.frame())
     }
 	d <- data
-	uu <- v <- seq(max(d[, -1])) - 1
+	uu <- v <- seq(max(d[, -1]))
 
 ###	
 diff.err.ind <- function(prm, F, dt, uu, whichdim){
@@ -61,9 +61,9 @@ diff.err.add <- function(prm, F, dt, uu, v){
         	 control = control, ...)
     se <- sqrt(diag(solve(res$hessian)))
     pscale <- if (model == "add")
-    	cbind(f(res$par, uu, 0), f(res$par, 0, v)) else
+    	cbind(f(res$par, uu, v[1]), f(res$par, uu[1], v)) else
     	f(res$par, uu)
-    psc <- list(pscale = pscale, stimulus = uu + 1, 
+    psc <- list(pscale = pscale, stimulus = uu, 
     	 sigma = 1,
         par = res$par, se = se, model = model,
         logLik = -res$value, hess = res$hessian, 

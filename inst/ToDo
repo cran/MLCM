@@ -1,1 +1,6 @@
 A test of the double cancellation condition
+
+make anova condition compare formula models
+
+plotting formula method with newdata argument: 
+  predict method or newdata argument for plot method?

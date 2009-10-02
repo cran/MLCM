@@ -1,5 +1,7 @@
 \name{plot.mlcm}
 \alias{plot.mlcm}
+\alias{lines.mlcm}
+\alias{points.mlcm}
 
 \title{ Plot an mlcm Object }
 \description{
@@ -7,6 +9,8 @@
 }
 \usage{
 \method{plot}{mlcm}(x, standard.scale = FALSE, transpose = FALSE, ...)
+\method{lines}{mlcm}(x, standard.scale = FALSE, transpose = FALSE, ...)
+\method{points}{mlcm}(x, standard.scale = FALSE, transpose = FALSE, ...)
 }
 
 \arguments{
@@ -16,7 +20,7 @@
   \item{\dots}{ other parameters to be passed through to the plotting function }
 }
 \details{
-  This function uses \code{matplot} so its help page should be examined for information on additional parameters that can be specified.
+  These functions use \code{matplot}, \code{matlines} and \code{matpoints} so their help page should be examined for information on additional parameters that can be specified.
 }
 
 

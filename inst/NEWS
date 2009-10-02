@@ -19,3 +19,16 @@
 0.0-5
 
   Added formula method for mlcm and adjusted methods to deal with it
+
+0.0-6
+
+  Some errors in docs
+
+  added formula examples to mlcm.rd
+
+  fixed error in coef.mlcm
+
+  added lines and points methods for class mlcm
+
+  added SE's and AIC to summary print method for class mlcm
+

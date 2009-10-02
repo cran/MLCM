@@ -21,7 +21,7 @@ mlcm(x, ...)
 \arguments{
   \item{x}{ a data frame of an odd number of columns (at least 5) or a formula object.  In the case of a data frame, the first should be logical or a 2-level factor named \code{Resp} indicating the response of the observer.  The next columns give the indices in pairs along each dimension for each of the two stimuli being compared. }
   \item{p}{ numeric indicating initial values of parameters for the formula method.}
-  \item{data}{data frame of class \sQuote{mlcm} for the formula method.}
+  \item{data}{data frame of class \sQuote{mlcm.df} for the formula method.}
   \item{model}{character indicating which of three conjoint measurement models to fit to the data:  \dQuote{add}, for additive (default), \dQuote{ind}, for independence or \dQuote{full}, for including a dependence with the levels of each dimension with the others. The \dQuote{full} is not applicable for the formula method.}
   \item{whichdim}{integer indicating which dimension of the data set to fit when the independence model is chosen}
   \item{lnk}{character indicating the link function to use with the binomial family.  Current default is the probit link.}
@@ -114,6 +114,31 @@ image(1:5, 1:5, bg.res,
 	col = grey.colors(100, min(bg.res), max(bg.res)),
 	xlab = "Gloss Level", ylab = "Bumpiness Level" 
 	)
+	
+#### Example with formula
+# additive model
+bg.frm <- mlcm(~ p[1] * (x - 1)^p[2] + p[3] * (y - 1)^p[4], 
+   p = c(0.1, 1.3, 1.6, 0.8), data = BumpyGlossy)
+summary(bg.frm)
+# independence model
+bg.frm1 <- mlcm(~ p[1] * (x - 1)^p[2], p = c(1.6, 0.8),
+	data = BumpyGlossy, model = "ind", whichdim = 2)
+summary(bg.frm1)
+
+### Test additive against independent fits
+ddev <- -2 * (logLik(bg.frm1) - logLik(bg.frm))
+df <- attr(logLik(bg.frm), "df") - attr(logLik(bg.frm1), "df")
+pchisq(as.vector(ddev), df, lower = FALSE)
+
+# Compare additive power law and nonparametric models 
+xx <- seq(1, 5, len = 100)
+par(mfrow = c(1, 1))
+with(bg.frm, plot(xx, func(par, 1, xx), 
+	type = "l"))
+with(bg.frm, lines(xx, func(par, xx, 1), 
+	type = "l"))
+plot(bg.add, pch = 21, bg = c("red", "blue"), add = TRUE)
+AIC(bg.frm, bg.add)
 par(opar)
 }
 
