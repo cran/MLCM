@@ -32,3 +32,13 @@
 
   added SE's and AIC to summary print method for class mlcm
 
+0.0-7
+
+  fixed some errors in man pages
+
+  added predict method, most useful when the formula method is used
+
+  anova method extended to handle fits with the formula method and
+  compare such fits with a glm method fit, but only one pair of such
+  models at a time
+

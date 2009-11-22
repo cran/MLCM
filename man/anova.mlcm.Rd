@@ -14,7 +14,7 @@
   \item{test}{a character string (partially) matching one of "Chisq", "F", or "Cp".  See \code{\link{stat.anova}}.  Normally, "Chisq" is the appropriate value, here. }
 }
 \details{
- See \code{\link{anova.glm}} for details.  In brief, specifying a single object, results in the display of a sequentila analysis of deviance table for that model.  Specifying several objects, a table indicating the results of the likelihood ratio tests between successive models is displayed.  The models must be nested and fit to the same data set..
+ See \code{\link{anova.glm}} for details.  In brief, specifying a single object, results in the display of a sequential analysis of deviance table for that model.  Specifying several objects, a table indicating the results of the likelihood ratio tests between successive models is displayed.  The models must be nested and fit to the same data set.  One can mix a \code{formula} method model with a \code{glm} model, but not more than one comparison between a pair of such models at a time.
 }
 \value{
 An object of class "anova" inheriting from class "data.frame". }

@@ -5,7 +5,7 @@
 \alias{print.mlcm}
 
 \title{Fit Conjoint Measurement Models by Maximum Likelihood}
-\description{Generic function \code{mlcm} uses different methods to fit the results of a conjoint measurement experiment using \code{glm} (Generalized Linear Model).  The default method (currently, the only one) permits fitting the data with a choice of 3 different models. 
+\description{Generic function \code{mlcm} uses different methods to fit the results of a conjoint measurement experiment using \code{glm} (Generalized Linear Model).  The default method permits fitting the data with a choice of 3 different models. The formula method permits fitting the data with a parametric model.
 }
 \usage{
 mlcm(x, ...)
@@ -133,11 +133,9 @@ pchisq(as.vector(ddev), df, lower = FALSE)
 # Compare additive power law and nonparametric models 
 xx <- seq(1, 5, len = 100)
 par(mfrow = c(1, 1))
-with(bg.frm, plot(xx, func(par, 1, xx), 
-	type = "l"))
-with(bg.frm, lines(xx, func(par, xx, 1), 
-	type = "l"))
-plot(bg.add, pch = 21, bg = c("red", "blue"), add = TRUE)
+plot(bg.add, pch = 21, bg = c("red", "blue"))
+lines(xx, predict(bg.frm, newdata = xx)[seq_along(xx)])
+lines(xx, predict(bg.frm, newdata = xx)[-seq_along(xx)])
 AIC(bg.frm, bg.add)
 par(opar)
 }
