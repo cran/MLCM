@@ -9,7 +9,7 @@ function(d){
 	ix.mat <- t(apply(ix.mat, 1, function(x) if (sum(x) == 0) x else
 		rep(0, max(d))))
 	colnames(ix.mat) <- paste(nms, seq(1, ncol(ix.mat)), sep = "")
-	ix.mat[, -1]
+	ix.mat[, -1, drop = FALSE]
 }
 
 `make.wide.full` <- function(d){
@@ -33,5 +33,5 @@ function(d){
         x
     else rep(0, nc)))
     colnames(ix.mat) <- levels(nms.f)
-	ix.mat[, -1]
+	ix.mat[, -1, drop = FALSE]
 	}

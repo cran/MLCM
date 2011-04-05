@@ -42,3 +42,16 @@
   compare such fits with a glm method fit, but only one pair of such
   models at a time
 
+0.0-8
+
+  fixed a bug in make.wide and make.wide.full, not returning
+  a matrix if the number of levels for a dimension was 2.  Needed
+  to add a drop = FALSE (thanks to Frans Houweling).
+
+  added code so that the number of levels per dimension does not
+  have to be the same for all dimensions, uncovered during
+  the repair of the previous bug.  In the print method, dimensions
+  with fewer levels than the dimension with the maximum number
+  are filled-out with NAs.
+
+

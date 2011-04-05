@@ -30,12 +30,17 @@ function (x, model = "add", whichdim = NULL, lnk = "probit",
     psc.glm$call$family[[2]] <- lnk
     psc.glm$call$control <- control
     nd <- (length(d) - 1)/2
-    nl <- (length(dsInc.df) - 1)/nd
+    nl <- ceiling((length(dsInc.df) - 1)/nd)
+    nlevs <- sapply(d[, -1][seq(2, length(d) - 1, 2)], max)
+    css <- c(0, cumsum(nlevs - 1))
     switch(model, add = {
         pscale <- sapply(seq_len(nd), function(ix) {
-            tmp <- c(0, coef(psc.glm)[seq((ix - 1) * nl + 1, 
-                ix * nl)])
-            names(tmp) <- paste("Lev", seq_len(nl + 1), sep = "")
+            tmp <- as.vector(c(0, coef(psc.glm)[seq(css[ix] + 1, css[ix + 1])]))
+           if (length(tmp) < max(nlevs)) 
+           		tmp <- c(tmp, rep(NA, max(nlevs) - nlevs[ix]))
+#            c(0, coef(psc.glm)[seq((ix - 1) * nl + 1, 
+#                ix * nl)])
+            names(tmp) <- paste("Lev", seq_len(nlevs[ix]), sep = "")
             tmp
         })
         colnames(pscale) <- unique(substring(names(d[, -1]), 
