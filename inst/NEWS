@@ -54,4 +54,6 @@
   with fewer levels than the dimension with the maximum number
   are filled-out with NAs.
 
+0.0-9
+  removed LazyLoad in Description
 

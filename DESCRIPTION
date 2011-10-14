@@ -1,8 +1,8 @@
 Package: MLCM
 Type: Package
 Title: Maximum Likelihood Conjoint Measurement
-Version: 0.0-8
-Date: 2011-04-05
+Version: 0.0-9
+Date: 2011-10-14
 Author: Kenneth Knoblauch and Laurence T. Maloney
 Maintainer: Ken Knoblauch <ken.knoblauch@inserm.fr>
 Depends: R (>= 2.9), graphics, stats, utils, base
@@ -14,8 +14,7 @@ Description: Conjoint measurement is a psychophysical procedure in
         likelihood method under several hypotheses of how the
         perceptual dimensions interact.
 License: GPL
-LazyLoad: yes
 LazyData: yes
-Packaged: 2011-04-05 11:23:16 UTC; knoblauch
+Packaged: 2011-10-14 09:38:52 UTC; knoblauch
 Repository: CRAN
-Date/Publication: 2011-04-05 14:46:56
+Date/Publication: 2011-10-14 13:22:09
