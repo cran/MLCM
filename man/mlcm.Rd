@@ -39,7 +39,7 @@ by maximum likelihood using \code{glm} that best predict the observer's judgment
 The function permits the estimation of 3 different models, independent, additive (the default) and full,
 by specifying the \code{model} argument.  The independent model fits the data along only 1 dimension, specified by the \code{whichdim} argument.  The additive model fits all dimensions with each fixed at 0 at the lowest level on each dimension.  Thus, if there are \eqn{n} dimensions each with \eqn{p_i} levels, \code{mlcm} estimates \eqn{\sum p_i - n} coefficients. 
 
-Specifying the full model will fit a saturated model in which an estimate will be made for each combination of the scale values except the lowest (0 on all scales).  Currently, this option only allows 2 dimensions to be fit.
+Specifying the full model will fit a saturated model in which an estimate will be made for each combination of the scale values except the lowest (0 on all scales). This option, now, allows any number of dimensions to be fit.
 }
 \value{
   a list of class \sQuote{mlcm} that will include some of the following components depending on whether the default or formual method is used:

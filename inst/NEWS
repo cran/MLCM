@@ -57,3 +57,9 @@
 0.0-9
   removed LazyLoad in Description
 
+0.1.0 
+  rewrote code to generate model matrices using formula objects and 
+  model.matrix so that mlcm now works with any number of dimensions 
+  and the number of levels per dimensions does not have to be equal.  
+  All 3 models, including model = "full" now work for all conditions.
+
