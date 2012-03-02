@@ -16,7 +16,8 @@ anova.mlcm <- function(object, ..., dispersion = NULL, test = NULL){
 		mods <- sapply(c(list(object), dotargs), 
 			function(x) deparse(formula(x)))
 		cat("Analysis of Deviance Test\n\n")
-		for(m in seq_along(mods)) cat("Model", m, ":  ", mods[m], "\n")
+		for(m in seq_along(mods)) 
+			cat("Model", m, ":  ", unlist(mods[m]), "\n")
 		p <- pchisq(abs(dlik), abs(ddf), lower.tail = FALSE)
 		dd <- data.frame(Df = ddf, Deviance = dlik, p = p)
 		print(dd)
@@ -24,7 +25,5 @@ anova.mlcm <- function(object, ..., dispersion = NULL, test = NULL){
 }
 
 formula.mlcm <- function(x, ...){
-	if (x$method == "glm")
-	formula(x$obj) else
-	x$formula
+	if (x$method == "glm") formula(x$obj) else x$formula
 	}

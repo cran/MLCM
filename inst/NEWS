@@ -63,3 +63,5 @@
   and the number of levels per dimensions does not have to be equal.  
   All 3 models, including model = "full" now work for all conditions.
 
+0.2.0 
+  minor modif to anova.mlcm method.
