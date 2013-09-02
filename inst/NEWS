@@ -65,3 +65,7 @@
 
 0.2.0 
   minor modif to anova.mlcm method.
+
+0.3.0
+  suggested change for R 3.1.0 to elminate use of anova.glmlist
+  in anova.mlcm.

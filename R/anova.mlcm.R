@@ -4,7 +4,7 @@ anova.mlcm <- function(object, ..., dispersion = NULL, test = NULL){
 	m2 <- if (length(dotargs) > 0) lapply(dotargs, "[[", "obj")
 	if (!(is.null(m1) || 
 			((length(m2) > 0) && any(sapply(m2, is.null))))){
-	if (length(m2) > 0) return(anova.glmlist(c(list(m1), m2), dispersion = dispersion, test = test)) else
+	if (length(m2) > 0) return(anova(structure(c(list(m1), m2), class = "glmlist"), dispersion = dispersion, test = test)) else
 		return(anova(m1, dispersion = dispersion, test = test))
 	} else {
 				

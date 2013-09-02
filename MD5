@@ -1,6 +1,6 @@
-1f2e81dc794a32b68126ee8b53e49425 *DESCRIPTION
+5e5524a154295c75d1a69670ec0587fe *DESCRIPTION
 ec76f4aae91f11c44ba546139e8fc49c *NAMESPACE
-6fc37932d4c2ca57e9971fd0bacc925b *R/anova.mlcm.R
+73b6b272051950f3082755808d67ce04 *R/anova.mlcm.R
 59166ad57e7fbfc30535bd4463d852bb *R/binom.diagnostics.R
 6f8850be00fccccfc142229a90ed2af2 *R/boot.mlcm.R
 8bd21bcc13283a40c263c661c66503d7 *R/coef.mlcm.R
@@ -19,7 +19,7 @@ f4f0a3dd14ed13d066c754ecc70f5a2c *R/print.summary.mlcm.R
 5fa84973abbf3136a1734e332f00efd0 *R/vcov.mlcm.R
 5872f6b99718e58a68f057eb136eac03 *data/BumpyGlossy.rda
 a044bd43466f8536ccb32925811b8d54 *data/GlossyBumpy.rda
-2c32161590f5723917726d05bfa3f937 *inst/NEWS
+2e17e0b20de05aae24b7f93402fc1417 *inst/NEWS
 94133eb6bef4b52aa608c6d6b70079c5 *inst/ToDo
 8a8c65ba0a2b7dcfedf35a4dcf5280e3 *man/BumpyGlossy.Rd
 bf7d778fb871dd7735f4f6a886e07e40 *man/MLCM-package.Rd
