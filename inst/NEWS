@@ -69,3 +69,6 @@
 0.3.0
   suggested change for R 3.1.0 to elminate use of anova.glmlist
   in anova.mlcm.
+
+0.4.0
+  Added option to plot scales in units of d' to plot, line and points methods.

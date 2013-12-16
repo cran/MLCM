@@ -1,5 +1,5 @@
 `plot.mlcm` <-
-function(x, standard.scale = FALSE, transpose = FALSE, ...){
+function(x, standard.scale = FALSE, transpose = FALSE, SD.scale = FALSE, ...){
    par(ask = FALSE)
    m <- if (transpose) t(x$pscale) else x$pscale
    if (standard.scale){
@@ -7,27 +7,27 @@ function(x, standard.scale = FALSE, transpose = FALSE, ...){
    	mx <- max(m[dm[1], ])
    	matplot(m/mx, ...)
    	} else
-   	matplot(m, ...)
+   	matplot((if (SD.scale) 2 else 1) * m, ...)
 }
 
 `lines.mlcm` <- function(x, standard.scale = FALSE,
-	transpose = FALSE, ...){
+	transpose = FALSE, SD.scale = FALSE, ...){
 	m <- if (transpose) t(x$pscale) else x$pscale
    if (standard.scale){
    	dm <- dim(m)
    	mx <- max(m[dm[1], ])
    	matlines(m/mx, ...)
    	} else
-   	matlines(m, ...)		
+   	matlines((if (SD.scale) 2 else 1) * m, ...)		
 }
 
 `points.mlcm` <- function(x, standard.scale = FALSE,
-	transpose = FALSE, ...){
+	transpose = FALSE, SD.scale = FALSE, ...){
 	m <- if (transpose) t(x$pscale) else x$pscale
    if (standard.scale){
    	dm <- dim(m)
    	mx <- max(m[dm[1], ])
    	matpoints(m/mx, ...)
    	} else
-   	matpoints(m, ...)		
+   	matpoints((if (SD.scale) 2 else 1) * m, ...)		
 }
