@@ -72,3 +72,10 @@
 
 0.4.0
   Added option to plot scales in units of d' to plot, line and points methods.
+
+0.4-1
+  Added an as.mlcm.df method
+
+  Fixed a bug in plot method for mlcm.df objects.  Was not correcting for
+  the presentation order of stimuli.
+

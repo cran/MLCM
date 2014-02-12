@@ -1,6 +1,7 @@
 export(mlcm, mlcm.default, mlcm.formula,
 	make.wide, make.wide.full,
-	boot.mlcm, binom.diagnostics)
+	boot.mlcm, binom.diagnostics,
+	as.mlcm.df)
 S3method(fitted, mlcm)
 S3method(formula, mlcm)
 S3method(plot, mlcm)
