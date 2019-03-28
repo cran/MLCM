@@ -22,7 +22,6 @@ make.wide.full(d)
 	\item{D2--Dq}{For each dimension along which the stimulus can vary, there are \eqn{q - 1} columns coding the absence or presence of that level of the dimension in the stimulus.  If the level is present, then the value is -1 or 1 as a function of which of the two stimuli contained that level, unless both do, in which case it is, also, 0. }
  
  }
-\references{\url{http://www.agrocampus-ouest.fr/math/useR-2009/slides/Knoblauch+Tandeau+Maloney.pdf}}
 \author{Kenneth Knoblauch }
 
 \keyword{manip}

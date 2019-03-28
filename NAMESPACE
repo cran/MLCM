@@ -2,6 +2,8 @@ export(mlcm, mlcm.default, mlcm.formula,
 	make.wide, make.wide.full,
 	boot.mlcm, binom.diagnostics,
 	as.mlcm.df)
+S3method(mlcm, default)
+S3method(mlcm, formula)
 S3method(fitted, mlcm)
 S3method(formula, mlcm)
 S3method(plot, mlcm)
@@ -19,3 +21,10 @@ S3method(coef, mlcm)
 S3method(vcov, mlcm)
 
 
+importFrom("grDevices", "grey")
+importFrom("graphics", "abline", "axis", "box", "hist", "image",
+               "lines", "matlines", "matplot", "matpoints", "par", "plot")
+importFrom("stats", "AIC", "anova", "as.formula", "binomial", "coef",
+               "fitted", "formula", "glm", "glm.control", "glm.fit",
+               "logLik", "model.matrix", "optim", "pchisq", "predict",
+               "rbinom", "residuals", "sd", "vcov")
