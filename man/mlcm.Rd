@@ -138,7 +138,39 @@ lines(xx, predict(bg.frm, newdata = xx)[seq_along(xx)])
 lines(xx, predict(bg.frm, newdata = xx)[-seq_along(xx)])
 AIC(bg.frm, bg.add)
 par(opar)
-}
 
+
+#### Analysis of 3-way MLCM data set
+# additive model
+T.mlcm <- mlcm(Texture)
+summary(T.mlcm)
+plot(T.mlcm, type = "b")
+# independent models
+lapply(seq(1, 3), function(wh){ 
+	m0 <- mlcm(Texture, model = "ind", which = wh)
+	anova(m0, T.mlcm, test = "Chisq")
+	})
+	
+# Deviance differences for 2-way interactions vs 2-way additive models
+
+mlcm(Texture[, -c(4, 5)])$obj$deviance - 
+		mlcm(Texture[, -c(4, 5)], model = "full")$obj$deviance
+mlcm(Texture[, -c(2, 3)])$obj$deviance - 
+		mlcm(Texture[, -c(2, 3)], model = "full")$obj$deviance
+mlcm(Texture[, -c(6, 7)])$obj$deviance - 
+		mlcm(Texture[, -c(6, 7)], model = "full")$obj$deviance
+
+# deviance differences for 3-way interaction tested against 3 2-way interactions
+T3way.mlcm <-  mlcm(Texture, model = "full")  
+## construct model matrix from 3 2-way interactions
+T3_2way.mf <- cbind(model.frame(mlcm(Texture[, -c(4, 5)], model = "full")$obj), 
+		model.matrix(mlcm(Texture[, -c(2, 3)], model = "full")$obj),
+		model.matrix(mlcm(Texture[, -c(6, 7)], model = "full")$obj)
+	)
+T3_2way.mlcm <- glm(Resp ~ . + 0, family = binomial(probit), data = T3_2way.mf) 
+Chi2 <- T3_2way.mlcm$deviance -  T3way.mlcm$obj$deviance
+degfr <- T3_2way.mlcm$df.residual -  T3way.mlcm$obj$df.residual
+pchisq(Chi2, degfr, lower.tail = FALSE)
+}
 \keyword{models}
 \keyword{regression}

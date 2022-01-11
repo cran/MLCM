@@ -15,41 +15,42 @@ Estimate perceptual scales from data collected in a conjoint measurement experim
 \tabular{ll}{
 Package: \tab MLCM\cr
 Type: \tab Package\cr
-Version: \tab 0.0-1\cr
-Date: \tab 2009-08-17\cr
+Version: \tab 0.4.3\cr
+Date: \tab 2020-01-11\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
-Built: \tab R 2.9.1; ; 2009-08-17 13:38:05 UTC; unix\cr
 }
 
 Index:
 \preformatted{
-BumpyGlossy	Conjoint Measurement Data for Bumpiness and
-	Glossiness
-MLCM-package	Estimate perceptual scales from a conjoint
-	measurement experiment by maximum likelihood
-anova.mlcm	Likelihood ratio tests for Maximum Likelihood 
-	Conjoint Measurement models
-logLik.mlcm	Calculate log likelihood for Conjoint Measurement models
-make.wide	Create data frame for Fitting Conjoint Measurment 
-    Scale by glm
-mlcm	Fit Conjoint Measurement Models by Maximum
-	Likelihood
-plot.mlcm	plot method for Maximum Likelihood Conjoint Measurement 
-    models
-print.mlcm	print method for Maximum Likelihood Conjoint
-	Measurement models
-print.summary.mlcm	print  method for summary of Maximum 
-    Likelihood Conjoint Measurement models
-summary.mlcm	summary method for Maximum Likelihood Conjoint 
-    Measurement models
+BumpyGlossy		Dataset: Conjoint Measurement for Bumpiness and Glossiness (Ho et al. 2008)
+
+Texture			Dataset: 3-way conjoint Measurement for Texture (Sun et. al, 2021)
+
+MLCM-package		Estimate perceptual scales from a conjoint measurement experiment by maximum likelihood
+
+anova.mlcm		Likelihood ratio tests for Maximum Likelihood Conjoint Measurement models
+
+logLik.mlcm		Calculate log likelihood for Conjoint Measurement models 
+
+make.wide		Create data frame for Fitting Conjoint Measurement Scale by glm
+
+mlcm			Fit Conjoint Measurement Models by Maximum Likelihood 
+
+plot.mlcm		plot method for Maximum Likelihood Conjoint Measurement models
+
+print.mlcm		print method for Maximum Likelihood Conjoint Measurement models
+
+print.summary.mlcm	print  method for summary of Maximum Likelihood Conjoint Measurement models
+
+summary.mlcm		summary method for Maximum Likelihood Conjoint Measurement models
 }
 }
 \author{
 Kenneth Knoblauch
 
-Maintainer: Ken Knoblauch <ken.knoblauch@inserm.fr>
+Maintainers: Guillermo Aguilar <guillermo.aguilar@mail.tu-berlin.de>, Ken Knoblauch <ken.knoblauch@inserm.fr>
 }
 \references{
 Luce, R. D., and Tukey, J. W. (1964). Simultaneous conjoint measurement. 

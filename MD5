@@ -1,4 +1,4 @@
-691c25f6ebfec559ef97b4a06df93023 *DESCRIPTION
+dc4496a581be88d1066564f416c0f9b9 *DESCRIPTION
 f14a6fe931db70d96eaa9752172a9707 *NAMESPACE
 73b6b272051950f3082755808d67ce04 *R/anova.mlcm.R
 f90a74f5984504b70f65a0386b03a4ae *R/as.mlcm.df.R
@@ -18,13 +18,16 @@ fb84764b8fbdf58cc0d75ca4a7772804 *R/plot.mlcm.R
 f4f0a3dd14ed13d066c754ecc70f5a2c *R/print.summary.mlcm.R
 9c95c79f6fe4b0bcd18436abd7e39dc6 *R/summary.mlcm.R
 5fa84973abbf3136a1734e332f00efd0 *R/vcov.mlcm.R
-d9de9a9bb7f7d971fde5f4ff13ccfa4e *README.md
+582d6d3a115d23662e2a1bcf4f006623 *README.md
+d0eaeb1621d5fd5e648ad67a5775b8cd *build/partial.rdb
 5872f6b99718e58a68f057eb136eac03 *data/BumpyGlossy.rda
 a044bd43466f8536ccb32925811b8d54 *data/GlossyBumpy.rda
-92cba0bbd3a7043f9811a2b0fb310326 *inst/NEWS
+ffbf3ec9d9a31d890c54c1eb1e3e9d8b *data/Texture.rda
+448e6493d447a59e43e423501808362d *inst/NEWS
 94133eb6bef4b52aa608c6d6b70079c5 *inst/ToDo
 8a8c65ba0a2b7dcfedf35a4dcf5280e3 *man/BumpyGlossy.Rd
-bf7d778fb871dd7735f4f6a886e07e40 *man/MLCM-package.Rd
+29419094e980f20c99d5297f6618dbdd *man/MLCM-package.Rd
+03e1121e28c7e71b11e5d80abe4187ca *man/Texture.Rd
 f16f69172ed286c944b0dafdbe47c6d2 *man/anova.mlcm.Rd
 57d2b2104ff9649b1e32b2dc2e984f41 *man/as.mlcm.df.Rd
 bcb54414d918a733fdda814a04180555 *man/binom.diagnostics.Rd
@@ -32,7 +35,7 @@ bcb54414d918a733fdda814a04180555 *man/binom.diagnostics.Rd
 5e6f1d82cd89ebfc73910992f398584e *man/fitted.mlcm.Rd
 fc39ee2c438b39b1146d435714337408 *man/logLik.mlcm.Rd
 39daee98291706f387c6baa0b3485981 *man/make.wide.Rd
-13516fff51630d781ff71f5009af56cf *man/mlcm.Rd
+2646cc83fcd2282b5f0da5a36dcb33bb *man/mlcm.Rd
 8f1b0cc7159f52d83819b5b6fd3c6a3a *man/plot.mlcm.Rd
 1c35cdca9f370192288a0251348114c6 *man/plot.mlcm.df.Rd
 fc83aaa5e493d91d6fa0eb1a6f5b36f7 *man/predict.mlcm.Rd
